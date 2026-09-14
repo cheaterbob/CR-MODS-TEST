@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "type": "ruleProfile",
+  "id": "temp.catalog-dependent-mode:rule/dependency-test",
+  "displayName": "Dependency Test",
+  "description": "A three-wave mode installed together with its required Catalog Test Difficulty.",
+  "modules": [
+    {
+      "type": "waveRules",
+      "spawnGrowthPerWave": 1,
+      "intermissionSeconds": 4,
+      "maximumWaves": 3
+    },
+    {
+      "type": "economyRules",
+      "startingMoney": 300,
+      "bountyMultiplier": 1.1,
+      "ammoDropChance": 0.25
+    }
+  ]
+}

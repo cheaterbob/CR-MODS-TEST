@@ -11,6 +11,7 @@ if ($catalog.schemaVersion -ne 1 -or $null -eq $catalog.packs) {
 }
 
 $ids = @{}
+$manifests = @{}
 foreach ($packDirectory in Get-ChildItem -LiteralPath (Join-Path $repositoryRoot 'packs') -Directory) {
     $manifestPath = Join-Path $packDirectory.FullName 'manifest.json'
     if (-not (Test-Path -LiteralPath $manifestPath)) {
@@ -24,6 +25,7 @@ foreach ($packDirectory in Get-ChildItem -LiteralPath (Join-Path $repositoryRoot
         throw "Duplicate pack ID $($manifest.id)."
     }
     $ids[$manifest.id] = $true
+    $manifests[$manifest.id] = $manifest
     foreach ($root in $manifest.contentRoots) {
         $contentRoot = Join-Path $packDirectory.FullName $root
         if (-not (Test-Path -LiteralPath $contentRoot -PathType Container)) {
@@ -31,6 +33,17 @@ foreach ($packDirectory in Get-ChildItem -LiteralPath (Join-Path $repositoryRoot
         }
         Get-ChildItem -LiteralPath $contentRoot -Filter '*.json' -File -Recurse |
             ForEach-Object { Get-Content -LiteralPath $_.FullName -Raw | ConvertFrom-Json | Out-Null }
+    }
+}
+
+foreach ($entry in $manifests.GetEnumerator()) {
+    foreach ($dependency in @($entry.Value.dependencies)) {
+        if ($dependency.id -ne 'core' -and -not $manifests.ContainsKey($dependency.id)) {
+            throw "$($entry.Key) requires missing source fixture $($dependency.id)."
+        }
+        if ($dependency.id -eq $entry.Key) {
+            throw "$($entry.Key) cannot depend on itself."
+        }
     }
 }
 

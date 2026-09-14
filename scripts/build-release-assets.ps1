@@ -11,7 +11,9 @@ New-Item -ItemType Directory -Path $outputRoot -Force | Out-Null
 Add-Type -AssemblyName System.IO.Compression
 
 foreach ($packDirectory in Get-ChildItem -LiteralPath $packsRoot -Directory | Sort-Object Name) {
-    $archivePath = Join-Path $outputRoot ($packDirectory.Name + '-1.0.0.zip')
+    $manifestPath = Join-Path $packDirectory.FullName 'manifest.json'
+    $manifest = Get-Content -LiteralPath $manifestPath -Raw | ConvertFrom-Json
+    $archivePath = Join-Path $outputRoot ($packDirectory.Name + '-' + $manifest.version + '.zip')
     if (Test-Path -LiteralPath $archivePath) {
         Remove-Item -LiteralPath $archivePath -Force
     }

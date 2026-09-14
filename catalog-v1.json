@@ -16,7 +16,9 @@
           "gameVersion": ">=2.1.2",
           "download": "https://github.com/cheaterbob/CR-MODS-TEST/releases/download/test-v1.0.0/temp.catalog-difficulty-1.0.0.zip",
           "sha256": "b47b6ecb278de37ba6ee98be94e3cb9fab7b4654b674b352c092f7148b3d0ba1",
-          "sizeBytes": 852
+          "sizeBytes": 852,
+          "dependencies": [{"id": "core", "version": ">=0.1.0"}],
+          "conflicts": []
         }
       ]
     },
@@ -35,7 +37,33 @@
           "gameVersion": ">=2.1.2",
           "download": "https://github.com/cheaterbob/CR-MODS-TEST/releases/download/test-v1.0.0/temp.catalog-mode-1.0.0.zip",
           "sha256": "e3f6d7540ef5ace2210ca63d1405de9e22dc0f0aa7d415ff7265b12b5c32d7d6",
-          "sizeBytes": 1022
+          "sizeBytes": 1022,
+          "dependencies": [{"id": "core", "version": ">=0.1.0"}],
+          "conflicts": []
+        }
+      ]
+    },
+    {
+      "id": "temp.catalog-dependent-mode",
+      "displayName": "Dependent Catalog Mode",
+      "authors": ["Captivity Reloaded test catalog"],
+      "summary": "Tests automatic dependency installation by requiring Catalog Test Difficulty before adding a three-wave game mode.",
+      "sourceRepository": "https://github.com/cheaterbob/CR-MODS-TEST",
+      "tags": ["game-mode", "dependency", "test"],
+      "contentWarnings": [],
+      "versions": [
+        {
+          "version": "1.0.0",
+          "modApiVersion": 1,
+          "gameVersion": ">=2.1.2",
+          "download": "https://github.com/cheaterbob/CR-MODS-TEST/releases/download/test-v1.1.0/temp.catalog-dependent-mode-1.0.0.zip",
+          "sha256": "19cc0f3a5472ede91499b5e7cfa9bc217512709b5458997a774b57fb694a1280",
+          "sizeBytes": 1051,
+          "dependencies": [
+            {"id": "core", "version": ">=0.1.0"},
+            {"id": "temp.catalog-difficulty", "version": ">=1.0.0"}
+          ],
+          "conflicts": []
         }
       ]
     }

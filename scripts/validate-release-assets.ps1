@@ -40,6 +40,16 @@ foreach ($pack in $catalog.packs) {
                     [int]$manifest.modApiVersion -ne [int]$version.modApiVersion) {
                     throw "$fileName manifest identity does not match its catalog entry."
                 }
+                $manifestDependencies = @($manifest.dependencies | ForEach-Object { "$($_.id)|$($_.version)" } | Sort-Object)
+                $catalogDependencies = @($version.dependencies | ForEach-Object { "$($_.id)|$($_.version)" } | Sort-Object)
+                if (($manifestDependencies -join ',') -ne ($catalogDependencies -join ',')) {
+                    throw "$fileName manifest dependencies do not match its catalog entry."
+                }
+                $manifestConflicts = @($manifest.conflicts | Sort-Object)
+                $catalogConflicts = @($version.conflicts | Sort-Object)
+                if (($manifestConflicts -join ',') -ne ($catalogConflicts -join ',')) {
+                    throw "$fileName manifest conflicts do not match its catalog entry."
+                }
             }
             finally { $archive.Dispose() }
         }
@@ -49,4 +59,3 @@ foreach ($pack in $catalog.packs) {
 }
 
 Write-Host "Validated $validated deterministic release archives against catalog-v1.json."
-

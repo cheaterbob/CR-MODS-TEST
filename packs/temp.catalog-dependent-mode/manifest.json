@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "id": "temp.catalog-dependent-mode",
+  "displayName": "Dependent Catalog Mode",
+  "version": "1.0.0",
+  "modApiVersion": 1,
+  "authors": ["Captivity Reloaded test catalog"],
+  "description": "Tests automatic dependency installation by requiring Catalog Test Difficulty.",
+  "dependencies": [
+    {
+      "id": "core",
+      "version": ">=0.1.0"
+    },
+    {
+      "id": "temp.catalog-difficulty",
+      "version": ">=1.0.0"
+    }
+  ],
+  "contentRoots": ["content"]
+}
