@@ -53,6 +53,19 @@
       "contentWarnings": [],
       "versions": [
         {
+          "version": "1.2.0",
+          "modApiVersion": 1,
+          "gameVersion": ">=2.1.2",
+          "download": "https://github.com/cheaterbob/CR-MODS-TEST/releases/download/test-v1.3.0/temp.catalog-dependent-mode-1.2.0.zip",
+          "sha256": "9ef4a91ea50b9456607a60b9e369ee11aa4a1685a4ea00fbb4a7dfc38086c7a7",
+          "sizeBytes": 1109,
+          "dependencies": [
+            {"id": "core", "version": ">=0.1.0"},
+            {"id": "temp.catalog-support", "version": ">=1.0.0"}
+          ],
+          "conflicts": []
+        },
+        {
           "version": "1.1.0",
           "modApiVersion": 1,
           "gameVersion": ">=2.1.2",

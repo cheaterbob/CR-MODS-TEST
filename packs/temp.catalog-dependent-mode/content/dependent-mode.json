@@ -3,7 +3,7 @@
   "type": "ruleProfile",
   "id": "temp.catalog-dependent-mode:rule/dependency-test",
   "displayName": "Dependency Test",
-  "description": "A three-wave mode installed together with its required Catalog Test Difficulty.",
+  "description": "A three-wave v1.2 mode installed together with its required support pack.",
   "modules": [
     {
       "type": "waveRules",
