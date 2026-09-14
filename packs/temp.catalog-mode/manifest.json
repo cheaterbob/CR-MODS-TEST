@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "id": "temp.catalog-mode",
+  "displayName": "Catalog Sprint Mode",
+  "version": "1.0.0",
+  "modApiVersion": 1,
+  "authors": ["Captivity Reloaded test catalog"],
+  "description": "A temporary downloader fixture that adds a short Catalog Sprint game mode.",
+  "dependencies": [
+    {
+      "id": "core",
+      "version": ">=0.1.0"
+    }
+  ],
+  "contentRoots": ["content"]
+}
+

@@ -1,0 +1,2 @@
+# The tiny canonical test ZIPs are intentionally committed so GitHub Actions
+# uploads the exact bytes whose hashes are recorded in catalog-v1.json.

@@ -1,0 +1,29 @@
+{
+  "schemaVersion": 1,
+  "type": "ruleProfile",
+  "id": "temp.catalog-mode:rule/catalog-sprint",
+  "displayName": "Catalog Sprint",
+  "description": "A short downloader test mode with five quick waves.",
+  "modules": [
+    {
+      "type": "spawnModifiers",
+      "waveSpawnMultiplier": 1.0,
+      "maxStageEnemiesMultiplier": 1.0,
+      "spawnDelayMultiplier": 0.75,
+      "initialSpawnDelayMultiplier": 0.5
+    },
+    {
+      "type": "waveRules",
+      "spawnGrowthPerWave": 2,
+      "intermissionSeconds": 5,
+      "maximumWaves": 5
+    },
+    {
+      "type": "economyRules",
+      "startingMoney": 250,
+      "bountyMultiplier": 1.25,
+      "ammoDropChance": 0.2
+    }
+  ]
+}
+

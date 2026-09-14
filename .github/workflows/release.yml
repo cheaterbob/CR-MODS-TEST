@@ -1,0 +1,27 @@
+name: Publish temporary test packs
+
+on:
+  push:
+    tags:
+      - "test-v*"
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate source packs
+        shell: pwsh
+        run: ./scripts/validate-source-packs.ps1
+      - name: Verify canonical release sizes, hashes, and archive identities
+        shell: pwsh
+        run: ./scripts/validate-release-assets.ps1
+      - name: Publish GitHub Release assets
+        uses: softprops/action-gh-release@v2
+        with:
+          prerelease: true
+          generate_release_notes: true
+          files: release-assets/*.zip

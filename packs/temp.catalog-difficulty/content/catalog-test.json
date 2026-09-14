@@ -1,0 +1,11 @@
+{
+  "schemaVersion": 1,
+  "type": "difficulty",
+  "id": "temp.catalog-difficulty:difficulty/catalog-test",
+  "displayName": "Catalog Test",
+  "sortOrder": 900,
+  "enemyHealthMultiplier": 1.1,
+  "playerDamageTakenMultiplier": 1.1,
+  "escapeStrengthMultiplier": 1.0
+}
+

@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "id": "temp.catalog-difficulty",
+  "displayName": "Catalog Test Difficulty",
+  "version": "1.0.0",
+  "modApiVersion": 1,
+  "authors": ["Captivity Reloaded test catalog"],
+  "description": "A temporary downloader fixture that adds a visible Catalog Test difficulty.",
+  "dependencies": [
+    {
+      "id": "core",
+      "version": ">=0.1.0"
+    }
+  ],
+  "contentRoots": ["content"]
+}
+

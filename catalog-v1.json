@@ -1,0 +1,43 @@
+{
+  "schemaVersion": 1,
+  "packs": [
+    {
+      "id": "temp.catalog-difficulty",
+      "displayName": "Catalog Test Difficulty",
+      "authors": ["Captivity Reloaded test catalog"],
+      "summary": "Installs a small Catalog Test difficulty so the complete browser, downloader, validation, installation, and restart flow can be verified.",
+      "sourceRepository": "https://github.com/cheaterbob/CR-MODS-TEST",
+      "tags": ["difficulty", "test"],
+      "contentWarnings": [],
+      "versions": [
+        {
+          "version": "1.0.0",
+          "modApiVersion": 1,
+          "gameVersion": ">=2.1.2",
+          "download": "https://github.com/cheaterbob/CR-MODS-TEST/releases/download/test-v1.0.0/temp.catalog-difficulty-1.0.0.zip",
+          "sha256": "b47b6ecb278de37ba6ee98be94e3cb9fab7b4654b674b352c092f7148b3d0ba1",
+          "sizeBytes": 852
+        }
+      ]
+    },
+    {
+      "id": "temp.catalog-mode",
+      "displayName": "Catalog Sprint Mode",
+      "authors": ["Captivity Reloaded test catalog"],
+      "summary": "Installs a five-wave Catalog Sprint mode as a second end-to-end downloader fixture.",
+      "sourceRepository": "https://github.com/cheaterbob/CR-MODS-TEST",
+      "tags": ["game-mode", "test"],
+      "contentWarnings": [],
+      "versions": [
+        {
+          "version": "1.0.0",
+          "modApiVersion": 1,
+          "gameVersion": ">=2.1.2",
+          "download": "https://github.com/cheaterbob/CR-MODS-TEST/releases/download/test-v1.0.0/temp.catalog-mode-1.0.0.zip",
+          "sha256": "e3f6d7540ef5ace2210ca63d1405de9e22dc0f0aa7d415ff7265b12b5c32d7d6",
+          "sizeBytes": 1022
+        }
+      ]
+    }
+  ]
+}
