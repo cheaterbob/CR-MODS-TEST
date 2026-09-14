@@ -1,5 +1,5 @@
 [CmdletBinding()]
-param()
+param([string[]] $PackId)
 
 $ErrorActionPreference = 'Stop'
 $repositoryRoot = Split-Path -Parent $PSScriptRoot
@@ -11,6 +11,7 @@ New-Item -ItemType Directory -Path $outputRoot -Force | Out-Null
 Add-Type -AssemblyName System.IO.Compression
 
 foreach ($packDirectory in Get-ChildItem -LiteralPath $packsRoot -Directory | Sort-Object Name) {
+    if ($PackId -and $packDirectory.Name -notin $PackId) { continue }
     $manifestPath = Join-Path $packDirectory.FullName 'manifest.json'
     $manifest = Get-Content -LiteralPath $manifestPath -Raw | ConvertFrom-Json
     $archivePath = Join-Path $outputRoot ($packDirectory.Name + '-' + $manifest.version + '.zip')

@@ -47,11 +47,24 @@
       "id": "temp.catalog-dependent-mode",
       "displayName": "Dependent Catalog Mode",
       "authors": ["Captivity Reloaded test catalog"],
-      "summary": "Tests automatic dependency installation by requiring Catalog Test Difficulty before adding a three-wave game mode.",
+      "summary": "Tests automatic dependency installation by requiring a separate support pack before adding a three-wave game mode.",
       "sourceRepository": "https://github.com/cheaterbob/CR-MODS-TEST",
       "tags": ["game-mode", "dependency", "test"],
       "contentWarnings": [],
       "versions": [
+        {
+          "version": "1.1.0",
+          "modApiVersion": 1,
+          "gameVersion": ">=2.1.2",
+          "download": "https://github.com/cheaterbob/CR-MODS-TEST/releases/download/test-v1.2.0/temp.catalog-dependent-mode-1.1.0.zip",
+          "sha256": "d0993d2b06ac867d37b06e14b993be4001f1a01f89bb8c21d45dfa59f7599233",
+          "sizeBytes": 1052,
+          "dependencies": [
+            {"id": "core", "version": ">=0.1.0"},
+            {"id": "temp.catalog-support", "version": ">=1.0.0"}
+          ],
+          "conflicts": []
+        },
         {
           "version": "1.0.0",
           "modApiVersion": 1,
@@ -63,6 +76,27 @@
             {"id": "core", "version": ">=0.1.0"},
             {"id": "temp.catalog-difficulty", "version": ">=1.0.0"}
           ],
+          "conflicts": []
+        }
+      ]
+    },
+    {
+      "id": "temp.catalog-support",
+      "displayName": "Catalog Dependency Support",
+      "authors": ["Captivity Reloaded test catalog"],
+      "summary": "A dedicated small dependency that should be downloaded automatically with the latest Dependent Catalog Mode.",
+      "sourceRepository": "https://github.com/cheaterbob/CR-MODS-TEST",
+      "tags": ["difficulty", "dependency", "test"],
+      "contentWarnings": [],
+      "versions": [
+        {
+          "version": "1.0.0",
+          "modApiVersion": 1,
+          "gameVersion": ">=2.1.2",
+          "download": "https://github.com/cheaterbob/CR-MODS-TEST/releases/download/test-v1.2.0/temp.catalog-support-1.0.0.zip",
+          "sha256": "1a9cc5b5568b294aed8205b8369bce52a4c0fd30b5d7696dcc3dbeb77e5897b9",
+          "sizeBytes": 899,
+          "dependencies": [{"id": "core", "version": ">=0.1.0"}],
           "conflicts": []
         }
       ]

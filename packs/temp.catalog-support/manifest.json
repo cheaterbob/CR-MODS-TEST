@@ -1,0 +1,16 @@
+{
+  "schemaVersion": 1,
+  "id": "temp.catalog-support",
+  "displayName": "Catalog Dependency Support",
+  "version": "1.0.0",
+  "modApiVersion": 1,
+  "authors": ["Captivity Reloaded test catalog"],
+  "description": "A small dependency installed automatically with Dependent Catalog Mode.",
+  "dependencies": [
+    {
+      "id": "core",
+      "version": ">=0.1.0"
+    }
+  ],
+  "contentRoots": ["content"]
+}

@@ -1,0 +1,10 @@
+{
+  "schemaVersion": 1,
+  "type": "difficulty",
+  "id": "temp.catalog-support:difficulty/dependency-support",
+  "displayName": "Dependency Support",
+  "sortOrder": 901,
+  "enemyHealthMultiplier": 0.95,
+  "playerDamageTakenMultiplier": 1.05,
+  "escapeStrengthMultiplier": 1.0
+}

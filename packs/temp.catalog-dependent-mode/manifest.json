@@ -2,17 +2,17 @@
   "schemaVersion": 1,
   "id": "temp.catalog-dependent-mode",
   "displayName": "Dependent Catalog Mode",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "modApiVersion": 1,
   "authors": ["Captivity Reloaded test catalog"],
-  "description": "Tests automatic dependency installation by requiring Catalog Test Difficulty.",
+  "description": "Tests automatic dependency installation by requiring the Catalog Dependency Support pack.",
   "dependencies": [
     {
       "id": "core",
       "version": ">=0.1.0"
     },
     {
-      "id": "temp.catalog-difficulty",
+      "id": "temp.catalog-support",
       "version": ">=1.0.0"
     }
   ],
